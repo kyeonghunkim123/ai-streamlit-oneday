@@ -11,7 +11,6 @@ keyword = st.text_input("키워드를 입력하세요.")
 if st.button('생성 :fire:'):
   with st.spinner('생성 중입니다.'):
     time.sleep(3)
-    st.write('hello')
 
   from openai import OpenAI
   import streamlit as st
@@ -27,9 +26,6 @@ if st.button('생성 :fire:'):
   )
 
   chat_result = chat_completion.choices[0].message.content
-
-  from openai import OpenAI
-  import streamlit as st
 
   client = OpenAI(api_key=st.secrets["API_KEY"])
 
